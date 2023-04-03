@@ -1,0 +1,117 @@
+
+ac = driver.find_element(By.XPATH, "//a[text()='Acre']") 
+ac.click()
+sleep(5)
+
+
+al = driver.find_element(By.XPATH, "//a[text()='Alagoas']") 
+al.click()
+sleep(5)
+
+
+ap = driver.find_element(By.XPATH, "//a[text()='Amapá']") 
+ap.click()
+sleep(5)
+
+am = driver.find_element(By.XPATH, "//a[text()='Amazonas']") 
+am.click()
+sleep(5)
+
+
+ba = driver.find_element(By.XPATH, "//a[text()='Bahia']") 
+ba.click()
+sleep(5)
+
+
+ce = driver.find_element(By.XPATH, "//a[text()='Ceará']") 
+ce.click()
+sleep(5)
+
+
+df = driver.find_element(By.XPATH, "//a[text()='Distrito Federal']") 
+df.click()
+sleep(5)
+
+es = driver.find_element(By.XPATH, "//a[text()='Espírito Santo']") 
+es.click()
+sleep(5)
+
+go = driver.find_element(By.XPATH, "//a[text()='Goiás']") 
+go.click()
+sleep(5)
+
+ma = driver.find_element(By.XPATH, "//a[text()='Maranhão']") 
+ma.click()
+sleep(5)
+
+mt = driver.find_element(By.XPATH, "//a[text()='Mato Grosso'] ") 
+mt.click()
+sleep(5)
+
+
+ms = driver.find_element(By.XPATH, "//a[text()='Mato Grosso do Sul']") 
+ms.click()
+sleep(5)
+
+
+mg = driver.find_element(By.XPATH, "//a[text()='Minas Gerais']") 
+mg.click()
+sleep(5)
+
+pa = driver.find_element(By.XPATH, "//a[text()='Pará']") 
+pa.click()
+sleep(5)
+
+pb = driver.find_element(By.XPATH, "//a[text()='Paraíba']") 
+pb.click()
+sleep(5)
+
+pr = driver.find_element(By.XPATH, "//a[text()='Paraná']") 
+pr.click()
+sleep(5)
+
+pe = driver.find_element(By.XPATH, "//a[text()='Pernambuco']") 
+pe.click()
+sleep(5)
+
+
+pi = driver.find_element(By.XPATH, "//a[text()='Piauí']") 
+pi.click()
+sleep(5)
+
+rj = driver.find_element(By.XPATH, "//a[text()='Rio de Janeiro']") 
+rj.click()
+sleep(5)
+
+rn = driver.find_element(By.XPATH, "//a[text()='Rio Grande do Norte']") 
+rn.click()
+sleep(5)
+
+rs = driver.find_element(By.XPATH, "//a[text()='Rio Grande do Sul']") 
+rs.click()
+sleep(5)
+
+ro = driver.find_element(By.XPATH, "//a[text()='Rondônia']") 
+ro.click()
+sleep(5)
+
+rr = driver.find_element(By.XPATH, "//a[text()='Roraima']") 
+rr.click()
+sleep(5)
+
+sc = driver.find_element(By.XPATH, "//a[text()='Santa Catarina']") 
+sc.click()
+sleep(5)
+
+sp = driver.find_element(By.XPATH, "//a[text()='São Paulo']") 
+sp.click()
+sleep(5)
+
+se = driver.find_element(By.XPATH, "//a[text()='Sergipe']") 
+se.click()
+sleep(5)
+
+
+to = driver.find_element(By.XPATH, "//a[text()='Tocantins']") 
+to.click()
+sleep(5)
