@@ -15,6 +15,32 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 from time import sleep
 import os
+import PySimpleGUI as sg
+from threading import Thread
+
+
+layout = [
+    [sg.Text("O que deseja pesquisar?")],
+    [sg.Input(key='pesquisa')],
+    [sg.Text('Selecione o local')],
+    [sg.Button('Start')],
+    [sg.Output(size=(60,10))]    
+]
+
+window = sg.Window('Auto_olx', layout=layout)
+
+
+
+while True:
+    event, values = window.read()
+    if event == sg.WIN_CLOSED:
+        break
+    elif event == 'Start':
+        thread_inicio = Thread(target='Start', daemon=True)
+        thread_inicio.start()
+        pesquisa = values['pesquisa']
+        sleep(3)
+
 
 
 def iniciar_driver():
@@ -46,6 +72,7 @@ campo_busca = driver.find_element(By.ID,"searchtext-input")
 campo_busca.click()
 sleep(2)
 #Digitando no campo de pesquisa
+
 campo_busca.send_keys('Yamaha mt-07')
 sleep(2)
 
