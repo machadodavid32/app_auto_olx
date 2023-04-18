@@ -24,6 +24,14 @@ layout = [
     [sg.Text("O que deseja pesquisar?")],
     [sg.Input(key='pesquisa')],
     [sg.Text('Selecione o local')],
+    [sg.Combo(values=['Brasil', 'Acre', 'Alagoas', 'Amapá', 'Amazonas',
+                      'Bahia', 'Ceará', 'Distrito Federal',
+                      'Espírito Santo', 'Goiás', 'Maranhão',
+                      'Mato Grosso', 'Mato Grosso do Sul', 'Minas Gerais',
+                      'Pará', 'Paraíba', 'Paraná', 'Pernanbuco',
+                      'Piauí', 'Rio de Janeiro', 'Rio Grande do Norte',
+                      'Rio Grande do Sul', 'Rondônia', 'Roraima', 'Santa Catarina',
+                      'São Paulo', 'Sergipe', 'Tocantins'], default_value='Brasil')],
     [sg.Button('Start')],
     [sg.Output(size=(60,10))]    
 ]
@@ -40,7 +48,9 @@ while True:
         thread_inicio = Thread(target='Start', daemon=True)
         thread_inicio.start()
         pesquisa = values['pesquisa']
-        sleep(3)
+        query = values[0]
+    
+    sleep(3)
 
 
 
@@ -71,6 +81,16 @@ while True:
     # Entrar na página
     driver.get('https://www.olx.com.br/')
     sleep(5)
+    
+    driver.execute_script("window.scrollTo(0, 800);")
+    sleep(5)
+    
+    if query == 'Acre':
+        ac = driver.find_element(By.LINK_TEXT,'AC')
+        ac.click()
+        sleep(3)
+        
+        
 
     # Localizar campo de busca
     campo_busca = driver.find_element(By.ID,"searchtext-input")
@@ -96,33 +116,42 @@ while True:
     sleep(5)
     
     
+    #if 'Acre':
+     #   ac = driver.find_element(By.XPATH, "//a[text()='Acre']") 
+      #  ac.click()
+       # sleep(5)
+     
+    #elif 'Alagoas':
+     #   al = driver.find_element(By.XPATH, "//a[text()='Alagoas']") 
+      #  al.click()
+       # sleep(5)   
+    
 
     while True:
-        # Não esquecer de mover até o final da pagina.
+    # Não esquecer de mover até o final da pagina.
         driver.execute_script('window.scrollTo(0,document.body.scrollHeight);')
         sleep(2)
 
 
-        # Class anuncio normal: kgl1mq-0 eFXRHn sc-ifAKCX iUMNkO
-        # Class anuncio destaque: kgl1mq-0 eFXRHn sc-ifAKCX ghBVzA   
-        # São classes diferentes, preciso achar algo incomum
-        # Achei esta: //div[@class='sc-12rk7z2-7 kDVQFY'] 
-        # Como queremos os titulos pra jogar na tabela, é só ir na tag mãe h2 desta forma; //div[@class='sc-12rk7z2-7 kDVQFY']//h2
+            # Class anuncio normal: kgl1mq-0 eFXRHn sc-ifAKCX iUMNkO
+            # Class anuncio destaque: kgl1mq-0 eFXRHn sc-ifAKCX ghBVzA   
+            # São classes diferentes, preciso achar algo incomum
+            # Achei esta: //div[@class='sc-12rk7z2-7 kDVQFY'] 
+            # Como queremos os titulos pra jogar na tabela, é só ir na tag mãe h2 desta forma; //div[@class='sc-12rk7z2-7 kDVQFY']//h2
 
         titulos = driver.find_elements(By.XPATH,"//div[@class='sc-12rk7z2-7 kDVQFY']//h2")
 
-        # Agora devemos pesquisar os preços:
+            # Agora devemos pesquisar os preços:
 
         precos = driver.find_elements(By.XPATH, "//div[@class='sc-1kn4z61-1 dGMPPn']")
-
         links = driver.find_elements(By.XPATH, "//a[@data-lurker-detail='list_id']")
 
-        # estados_todos = driver.find_elements(By.XPATH, '//a[@class="sc-1l6qrj6-0 hSmLZl sc-gzVnrw kGFTcZ"]') 
+            # estados_todos = driver.find_elements(By.XPATH, '//a[@class="sc-1l6qrj6-0 hSmLZl sc-gzVnrw kGFTcZ"]') 
 
 
-        # Guardar esses dados em arquivos CSV
+            # Guardar esses dados em arquivos CSV
         for titulo, preco, link in zip(titulos, precos, links):
-            with open('precos1.csv', 'a', encoding='utf-8', newline='') as arquivo:
+             with open('precos.csv', 'a', encoding='utf-8', newline='') as arquivo:
                 link_processado = link.get_attribute('href')   # href é o atributo onde se encontra de fato o link
                 arquivo.write(f'{titulo.text};{preco.text};{link_processado}{os.linesep}')  #os.linesep é uma quebra de linha para organizar as linhas
         try:        
