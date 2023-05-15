@@ -3,10 +3,10 @@ ac = driver.find_element(By.XPATH, "//a[text()='Acre']")
 ac.click()
 sleep(5)
 
-
 al = driver.find_element(By.XPATH, "//a[text()='Alagoas']") 
 al.click()
 sleep(5)
+
 
 
 ap = driver.find_element(By.XPATH, "//a[text()='Amapá']") 
