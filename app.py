@@ -224,58 +224,58 @@ while True:
 
      
   
-# Localizar campo de busca
-campo_busca = driver.find_elements(By.XPATH, "//div[@class='h3us20-4 cxGeqJ']//header[@id='header']//div[@class='sc-eopZyb kKYSjG']//div[@class='sc-1i3d8qn-0 esODqn']//span/input[@class='sc-iwsKbI kbHpBK']")
-sleep(3)
-# Clicando no campo de busca
-campo_busca.click()
-sleep(2)
-        
-#Digitando no campo de pesquisa
-campo_busca.send_keys(pesquisa)
-sleep(2)
-
-# Achar campo busca em buscar
-botao_busca = driver.find_element(By.CLASS_NAME, 'search-button-submit')
-sleep(2)
-
-# Clicando no botão de busca
-botao_busca.click()
-sleep(8)
-
-while True:
-    driver.execute_script('window.scrollTo(0,document.body.scrollHeight);')
+    # Localizar campo de busca
+    campo_busca = driver.find_elements(By.XPATH, "//div[@class='h3us20-4 cxGeqJ']//header[@id='header']")
+    sleep(3)
+    # Clicando no campo de busca
+    campo_busca.click()
+    sleep(2)
+            
+    #Digitando no campo de pesquisa
+    campo_busca.send_keys(pesquisa)
     sleep(2)
 
+    # Achar campo busca em buscar
+    botao_busca = driver.find_element(By.CLASS_NAME, 'search-button-submit')
+    sleep(2)
 
-                    # Class anuncio normal: kgl1mq-0 eFXRHn sc-ifAKCX iUMNkO
-                    # Class anuncio destaque: kgl1mq-0 eFXRHn sc-ifAKCX ghBVzA   
-                    # São classes diferentes, preciso achar algo incomum
-                    # Achei esta: //div[@class='sc-12rk7z2-7 kDVQFY'] 
-                    # Como queremos os titulos pra jogar na tabela, é só ir na tag mãe h2 desta forma; //div[@class='sc-12rk7z2-7 kDVQFY']//h2
+    # Clicando no botão de busca
+    botao_busca.click()
+    sleep(8)
 
-    titulos = driver.find_elements(By.XPATH,"//div[@class='sc-12rk7z2-7 kDVQFY']//h2")
-
-                    # Agora devemos pesquisar os preços:
-
-    precos = driver.find_elements(By.XPATH, "//div[@class='sc-1kn4z61-1 dGMPPn']")
-    links = driver.find_elements(By.XPATH, "//a[@data-lurker-detail='list_id']")
-
-                    # estados_todos = driver.find_elements(By.XPATH, '//a[@class="sc-1l6qrj6-0 hSmLZl sc-gzVnrw kGFTcZ"]') 
+    while True:
+        driver.execute_script('window.scrollTo(0,document.body.scrollHeight);')
+        sleep(2)
 
 
-    # Guardar esses dados em arquivos CSV
-    for titulo, preco, link in zip(titulos, precos, links):
-        with open('precos.csv', 'a', encoding='utf-8', newline='') as arquivo:
-                link_processado = link.get_attribute('href')   # href é o atributo onde se encontra de fato o link
-                arquivo.write(f'{titulo.text};{preco.text};{link_processado}{os.linesep}')  #os.linesep é uma quebra de linha para organizar as linhas
-    try:               
-        proxima_pagina = driver.find_element(By.XPATH, "//span[text()='Próxima pagina']")     
-        proxima_pagina.click()
-    except:
-        print('Fim da extração')
-        break      
+                        # Class anuncio normal: kgl1mq-0 eFXRHn sc-ifAKCX iUMNkO
+                        # Class anuncio destaque: kgl1mq-0 eFXRHn sc-ifAKCX ghBVzA   
+                        # São classes diferentes, preciso achar algo incomum
+                        # Achei esta: //div[@class='sc-12rk7z2-7 kDVQFY'] 
+                        # Como queremos os titulos pra jogar na tabela, é só ir na tag mãe h2 desta forma; //div[@class='sc-12rk7z2-7 kDVQFY']//h2
 
-    input('')
-    driver.close()    
-        
+        titulos = driver.find_elements(By.XPATH,"//div[@class='sc-12rk7z2-7 kDVQFY']//h2")
+
+                        # Agora devemos pesquisar os preços:
+
+        precos = driver.find_elements(By.XPATH, "//div[@class='sc-1kn4z61-1 dGMPPn']")
+        links = driver.find_elements(By.XPATH, "//a[@data-lurker-detail='list_id']")
+
+                        # estados_todos = driver.find_elements(By.XPATH, '//a[@class="sc-1l6qrj6-0 hSmLZl sc-gzVnrw kGFTcZ"]') 
+
+
+        # Guardar esses dados em arquivos CSV
+        for titulo, preco, link in zip(titulos, precos, links):
+            with open('precos.csv', 'a', encoding='utf-8', newline='') as arquivo:
+                    link_processado = link.get_attribute('href')   # href é o atributo onde se encontra de fato o link
+                    arquivo.write(f'{titulo.text};{preco.text};{link_processado}{os.linesep}')  #os.linesep é uma quebra de linha para organizar as linhas
+        try:               
+            proxima_pagina = driver.find_element(By.XPATH, "//span[text()='Próxima pagina']")     
+            proxima_pagina.click()
+        except:
+            print('Fim da extração')
+            break      
+
+        input('')
+        driver.close()    
+            
