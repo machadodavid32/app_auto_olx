@@ -95,6 +95,11 @@ while True:
     br = driver.find_element(By.XPATH,"//a[@class='wodqy3-1 hsTaDz sc-gzVnrw gEAEAL']")
     br.click()
     sleep(5)
+    
+    if query == 'Acre':
+        ac = driver.find_element(By.XPATH, "//a[@class='sc-1l6qrj6-0 hSmLZl sc-gzVnrw gEAEAL']")
+        ac.click()
+        sleep(5)
    
     
     while True:
