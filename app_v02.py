@@ -97,9 +97,140 @@ while True:
     sleep(5)
     
     if query == 'Acre':
-        ac = driver.find_element(By.XPATH, "//a[@class='sc-1l6qrj6-0 hSmLZl sc-gzVnrw gEAEAL']")
+        ac = driver.find_element(By.LINK_TEXT,'Acre')
         ac.click()
         sleep(5)
+        
+    if query == 'Alagoas':
+        al = driver.find_element(By.LINK_TEXT,'Alagoas')
+        al.click()
+        sleep(5)    
+    
+    if query == 'Amapá':
+        ap = driver.find_element(By.LINK_TEXT, 'Amapá')
+        ap.click()
+        sleep(5)
+                
+    elif query == 'Amazonas':
+        am = driver.find_element(By.LINK_TEXT, 'Amazonas')
+        am.click()
+        sleep(5)
+            
+    elif query == 'Bahia':
+        ba = driver.find_element(By.LINK_TEXT, 'Bahia')
+        ba.click()
+        sleep(5)
+        
+    elif query == 'Ceará':
+        ce = driver.find_element(By.LINK_TEXT, 'Ceará')
+        ce.click()
+        sleep(5)
+        
+    elif query == 'Distrito Federal':
+        df = driver.find_element(By.LINK_TEXT, 'Distrito Federal')
+        df.click()
+        sleep(5)
+        
+    elif query == 'Espírito Santo':
+        es = driver.find_element(By.LINK_TEXT, 'Espírito Santo')
+        es.click()
+        sleep(5)
+        
+    elif query == 'Goiás':
+        go = driver.find_element(By.LINK_TEXT, 'Goiás')
+        go.click()
+        sleep(5)       
+        
+    elif query == 'Maranhão':
+        ma = driver.find_element(By.LINK_TEXT, 'Maranhão')
+        ma.click()
+        sleep(5)        
+        
+    elif query == 'Mato Grosso':
+        mt = driver.find_element(By.LINK_TEXT, 'Mato Grosso')
+        mt.click()
+        sleep(5)    
+        
+    elif query == 'Mato Grosso do Sul':
+        ms = driver.find_element(By.LINK_TEXT, 'Mato Grosso do Sul')
+        ms.click()
+        sleep(5)            
+        
+    elif query == 'Minas Gerais':
+        mg = driver.find_element(By.LINK_TEXT, 'Minas Gerais')
+        mg.click()
+        sleep(5)
+        
+    elif query == 'Pará':
+        pa = driver.find_element(By.LINK_TEXT, 'Pará')
+        pa.click()
+        sleep(5)
+        
+    elif query == 'Paraíba':
+        pb = driver.find_element(By.LINK_TEXT, 'Paraíba')
+        pb.click()
+        sleep(5)
+        
+    elif query == 'Paraná':
+        pr = driver.find_element(By.LINK_TEXT, 'Paraná')
+        pr.click()
+        sleep(5)
+        
+    elif query == 'Pernanbuco':
+        pe = driver.find_element(By.LINK_TEXT, 'Pernanbuco')
+        pe.click()
+        sleep(5)
+        
+    elif query == 'Piauí':
+        pi = driver.find_element(By.LINK_TEXT, 'Piauí')
+        pi.click()
+        sleep(5)
+        
+    elif query == 'Rio de Janeiro':
+        rj = driver.find_element(By.LINK_TEXT, 'Rio de Janeiro')
+        rj.click()
+        sleep(5)
+        
+    elif query == 'Rio Grande do Norte':
+        rn = driver.find_element(By.LINK_TEXT, 'Rio Grande do Norte')
+        rn.click()
+        sleep(5)
+        
+    elif query == 'Rio Grande do Sul':
+        rs = driver.find_element(By.LINK_TEXT, 'Rio Grande do Sul')
+        rs.click()
+        sleep(5)
+        
+    elif query == 'Rondônia':
+        ro = driver.find_element(By.LINK_TEXT, 'Rondônia')
+        ro.click()
+        sleep(5)
+        
+    elif query == 'Roraima':
+        rr = driver.find_element(By.LINK_TEXT, 'Roraima')
+        rr.click()
+        sleep(5)
+        
+    elif query == 'Santa Catarina':
+        sc = driver.find_element(By.LINK_TEXT, 'Santa Catarina')
+        sc.click()
+        sleep(5)
+        
+    elif query == 'São Paulo':
+        sp = driver.find_element(By.LINK_TEXT, 'São Paulo')
+        sp.click()
+        sleep(5)
+        
+    elif query == 'Sergipe':
+        se = driver.find_element(By.LINK_TEXT, 'Sergipe')
+        se.click()
+        sleep(5)
+        
+    elif query == 'Tocantins':
+        to = driver.find_element(By.LINK_TEXT, 'Tocantins')
+        to.click()
+        sleep(5)          
+    
    
     
     while True:
