@@ -111,122 +111,122 @@ while True:
         ap.click()
         sleep(5)
                 
-    elif query == 'Amazonas':
+    if query == 'Amazonas':
         am = driver.find_element(By.LINK_TEXT, 'Amazonas')
         am.click()
         sleep(5)
             
-    elif query == 'Bahia':
+    if query == 'Bahia':
         ba = driver.find_element(By.LINK_TEXT, 'Bahia')
         ba.click()
         sleep(5)
         
-    elif query == 'Ceará':
+    if query == 'Ceará':
         ce = driver.find_element(By.LINK_TEXT, 'Ceará')
         ce.click()
         sleep(5)
         
-    elif query == 'Distrito Federal':
+    if query == 'Distrito Federal':
         df = driver.find_element(By.LINK_TEXT, 'Distrito Federal')
         df.click()
         sleep(5)
         
-    elif query == 'Espírito Santo':
+    if query == 'Espírito Santo':
         es = driver.find_element(By.LINK_TEXT, 'Espírito Santo')
         es.click()
         sleep(5)
         
-    elif query == 'Goiás':
+    if query == 'Goiás':
         go = driver.find_element(By.LINK_TEXT, 'Goiás')
         go.click()
         sleep(5)       
         
-    elif query == 'Maranhão':
+    if query == 'Maranhão':
         ma = driver.find_element(By.LINK_TEXT, 'Maranhão')
         ma.click()
         sleep(5)        
         
-    elif query == 'Mato Grosso':
+    if query == 'Mato Grosso':
         mt = driver.find_element(By.LINK_TEXT, 'Mato Grosso')
         mt.click()
         sleep(5)    
         
-    elif query == 'Mato Grosso do Sul':
+    if query == 'Mato Grosso do Sul':
         ms = driver.find_element(By.LINK_TEXT, 'Mato Grosso do Sul')
         ms.click()
         sleep(5)            
         
-    elif query == 'Minas Gerais':
+    if query == 'Minas Gerais':
         mg = driver.find_element(By.LINK_TEXT, 'Minas Gerais')
         mg.click()
         sleep(5)
         
-    elif query == 'Pará':
+    if query == 'Pará':
         pa = driver.find_element(By.LINK_TEXT, 'Pará')
         pa.click()
         sleep(5)
         
-    elif query == 'Paraíba':
+    if query == 'Paraíba':
         pb = driver.find_element(By.LINK_TEXT, 'Paraíba')
         pb.click()
         sleep(5)
         
-    elif query == 'Paraná':
+    if query == 'Paraná':
         pr = driver.find_element(By.LINK_TEXT, 'Paraná')
         pr.click()
         sleep(5)
         
-    elif query == 'Pernanbuco':
+    if query == 'Pernanbuco':
         pe = driver.find_element(By.LINK_TEXT, 'Pernanbuco')
         pe.click()
         sleep(5)
         
-    elif query == 'Piauí':
+    if query == 'Piauí':
         pi = driver.find_element(By.LINK_TEXT, 'Piauí')
         pi.click()
         sleep(5)
         
-    elif query == 'Rio de Janeiro':
+    if query == 'Rio de Janeiro':
         rj = driver.find_element(By.LINK_TEXT, 'Rio de Janeiro')
         rj.click()
         sleep(5)
         
-    elif query == 'Rio Grande do Norte':
+    if query == 'Rio Grande do Norte':
         rn = driver.find_element(By.LINK_TEXT, 'Rio Grande do Norte')
         rn.click()
         sleep(5)
         
-    elif query == 'Rio Grande do Sul':
+    if query == 'Rio Grande do Sul':
         rs = driver.find_element(By.LINK_TEXT, 'Rio Grande do Sul')
         rs.click()
         sleep(5)
         
-    elif query == 'Rondônia':
+    if query == 'Rondônia':
         ro = driver.find_element(By.LINK_TEXT, 'Rondônia')
         ro.click()
         sleep(5)
         
-    elif query == 'Roraima':
+    if query == 'Roraima':
         rr = driver.find_element(By.LINK_TEXT, 'Roraima')
         rr.click()
         sleep(5)
         
-    elif query == 'Santa Catarina':
+    if query == 'Santa Catarina':
         sc = driver.find_element(By.LINK_TEXT, 'Santa Catarina')
         sc.click()
         sleep(5)
         
-    elif query == 'São Paulo':
+    if query == 'São Paulo':
         sp = driver.find_element(By.LINK_TEXT, 'São Paulo')
         sp.click()
         sleep(5)
         
-    elif query == 'Sergipe':
+    if query == 'Sergipe':
         se = driver.find_element(By.LINK_TEXT, 'Sergipe')
         se.click()
         sleep(5)
         
-    elif query == 'Tocantins':
+    if query == 'Tocantins':
         to = driver.find_element(By.LINK_TEXT, 'Tocantins')
         to.click()
         sleep(5)          
