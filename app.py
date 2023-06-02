@@ -85,137 +85,137 @@ while True:
         br.click()
         sleep(5)
     
-    elif query == 'Acre':
+    if query == 'Acre':
         ac = driver.find_element(By.XPATH, "//a[text()='ac']")
         ac.click()
         sleep(5)
         
-    elif query == 'Alagoas':
+    if query == 'Alagoas':
         al = driver.find_element(By.XPATH, "//a[text()='al']")
         al.click()
         sleep(5)   
     
-    elif query == 'Amapá':
+    if query == 'Amapá':
         ap = driver.find_element(By.XPATH, "//a[text()='ap']")
         ap.click()
         sleep(5)
                 
-    elif query == 'Amazonas':
+    if query == 'Amazonas':
         am = driver.find_element(By.XPATH, "//a[text()='am']")
         am.click()
         sleep(5)
             
-    elif query == 'Bahia':
+    if query == 'Bahia':
         ba = driver.find_element(By.XPATH, "//a[text()='ba']")
         ba.click()
         sleep(5)
         
-    elif query == 'Ceará':
+    if query == 'Ceará':
         ce = driver.find_element(By.XPATH, "//a[text()='ce']")
         ce.click()
         sleep(5)
         
-    elif query == 'Distrito Federal':
+    if query == 'Distrito Federal':
         df = driver.find_element(By.XPATH, "//a[text()='df']")
         df.click()
         sleep(5)
         
-    elif query == 'Espírito Santo':
+    if query == 'Espírito Santo':
         es = driver.find_element(By.XPATH, "//a[text()='es']")
         es.click()
         sleep(5)
         
-    elif query == 'Goiás':
+    if query == 'Goiás':
         go = driver.find_element(By.XPATH, "//a[text()='go']")
         go.click()
         sleep(5)       
         
-    elif query == 'Maranhão':
+    if query == 'Maranhão':
         ma = driver.find_element(By.XPATH, "//a[text()='ma']")
         ma.click()
         sleep(5)        
         
-    elif query == 'Mato Grosso':
+    if query == 'Mato Grosso':
         mt = driver.find_element(By.XPATH, "//a[text()='mt']")
         mt.click()
         sleep(5)    
         
-    elif query == 'Mato Grosso do Sul':
+    if query == 'Mato Grosso do Sul':
         ms = driver.find_element(By.XPATH, "//a[text()='ms']")
         ms.click()
         sleep(5)            
         
-    elif query == 'Minas Gerais':
+    if query == 'Minas Gerais':
         mg = driver.find_element(By.XPATH, "//a[text()='mg']")
         mg.click()
         sleep(5)
         
-    elif query == 'Pará':
+    if query == 'Pará':
         pa = driver.find_element(By.XPATH, "//a[text()='pa']")
         pa.click()
         sleep(5)
         
-    elif query == 'Paraíba':
+    if query == 'Paraíba':
         pb = driver.find_element(By.XPATH, "//a[text()='pb']")
         pb.click()
         sleep(5)
         
-    elif query == 'Paraná':
+    if query == 'Paraná':
         pr = driver.find_element(By.XPATH, "//a[text()='pr']")
         pr.click()
         sleep(5)
         
-    elif query == 'Pernanbuco':
+    if query == 'Pernanbuco':
         pe = driver.find_element(By.XPATH, "//a[text()='pe']")
         pe.click()
         sleep(5)
         
-    elif query == 'Piauí':
+    if query == 'Piauí':
         pi = driver.find_element(By.XPATH, "//a[text()='pi']")
         pi.click()
         sleep(5)
         
-    elif query == 'Rio de Janeiro':
+    if query == 'Rio de Janeiro':
         rj = driver.find_element(By.XPATH, "//a[text()='rj']")
         rj.click()
         sleep(5)
         
-    elif query == 'Rio Grande do Norte':
+    if query == 'Rio Grande do Norte':
         rn = driver.find_element(By.XPATH, "//a[text()='rn']")
         rn.click()
         sleep(5)
         
-    elif query == 'Rio Grande do Sul':
+    if query == 'Rio Grande do Sul':
         rs = driver.find_element(By.XPATH, "//a[text()='rs']")
         rs.click()
         sleep(5)
         
-    elif query == 'Rondônia':
+    if query == 'Rondônia':
         ro = driver.find_element(By.XPATH, "//a[text()='ro']")
         ro.click()
         sleep(5)
         
-    elif query == 'Roraima':
+    if query == 'Roraima':
         rr = driver.find_element(By.XPATH, "//a[text()='rr']")
         rr.click()
         sleep(5)
         
-    elif query == 'Santa Catarina':
+    if query == 'Santa Catarina':
         sc = driver.find_element(By.XPATH, "//a[text()='sc']")
         sc.click()
         sleep(5)
         
-    elif query == 'São Paulo':
+    if query == 'São Paulo':
         sp = driver.find_element(By.XPATH, "//a[text()='sp']")
         sp.click()
         sleep(5)
         
-    elif query == 'Sergipe':
+    if query == 'Sergipe':
         se = driver.find_element(By.XPATH, "//a[text()='se']")
         se.click()
         sleep(5)
         
-    elif query == 'Tocantins':
+    if query == 'Tocantins':
         to = driver.find_element(By.XPATH, "//a[text()='to']")
         to.click()
         sleep(5)          
@@ -224,58 +224,58 @@ while True:
 
      
   
-    # Localizar campo de busca
-    campo_busca = driver.find_elements(By.XPATH, "//div[@class='h3us20-4 cxGeqJ']//header[@id='header']")
-    sleep(3)
-    # Clicando no campo de busca
-    campo_busca.click()
-    sleep(2)
-            
-    #Digitando no campo de pesquisa
-    campo_busca.send_keys(pesquisa)
-    sleep(2)
-
-    # Achar campo busca em buscar
-    botao_busca = driver.find_element(By.CLASS_NAME, 'search-button-submit')
-    sleep(2)
-
-    # Clicando no botão de busca
-    botao_busca.click()
-    sleep(8)
-
-    while True:
-        driver.execute_script('window.scrollTo(0,document.body.scrollHeight);')
+        # Localizar campo de busca
+        campo_busca = driver.find_elements(By.XPATH, "//div[@class='h3us20-4 cxGeqJ']//header[@id='header']")
+        sleep(3)
+        # Clicando no campo de busca
+        campo_busca.click()
+        sleep(2)
+                
+        #Digitando no campo de pesquisa
+        campo_busca.send_keys(pesquisa)
         sleep(2)
 
+        # Achar campo busca em buscar
+        botao_busca = driver.find_element(By.CLASS_NAME, 'search-button-submit')
+        sleep(2)
 
-                        # Class anuncio normal: kgl1mq-0 eFXRHn sc-ifAKCX iUMNkO
-                        # Class anuncio destaque: kgl1mq-0 eFXRHn sc-ifAKCX ghBVzA   
-                        # São classes diferentes, preciso achar algo incomum
-                        # Achei esta: //div[@class='sc-12rk7z2-7 kDVQFY'] 
-                        # Como queremos os titulos pra jogar na tabela, é só ir na tag mãe h2 desta forma; //div[@class='sc-12rk7z2-7 kDVQFY']//h2
+        # Clicando no botão de busca
+        botao_busca.click()
+        sleep(8)
 
-        titulos = driver.find_elements(By.XPATH,"//div[@class='sc-12rk7z2-7 kDVQFY']//h2")
-
-                        # Agora devemos pesquisar os preços:
-
-        precos = driver.find_elements(By.XPATH, "//div[@class='sc-1kn4z61-1 dGMPPn']")
-        links = driver.find_elements(By.XPATH, "//a[@data-lurker-detail='list_id']")
-
-                        # estados_todos = driver.find_elements(By.XPATH, '//a[@class="sc-1l6qrj6-0 hSmLZl sc-gzVnrw kGFTcZ"]') 
+        while True:
+            driver.execute_script('window.scrollTo(0,document.body.scrollHeight);')
+            sleep(2)
 
 
-        # Guardar esses dados em arquivos CSV
-        for titulo, preco, link in zip(titulos, precos, links):
-            with open('precos.csv', 'a', encoding='utf-8', newline='') as arquivo:
-                    link_processado = link.get_attribute('href')   # href é o atributo onde se encontra de fato o link
-                    arquivo.write(f'{titulo.text};{preco.text};{link_processado}{os.linesep}')  #os.linesep é uma quebra de linha para organizar as linhas
-        try:               
-            proxima_pagina = driver.find_element(By.XPATH, "//span[text()='Próxima pagina']")     
-            proxima_pagina.click()
-        except:
-            print('Fim da extração')
-            break      
+                            # Class anuncio normal: kgl1mq-0 eFXRHn sc-ifAKCX iUMNkO
+                            # Class anuncio destaque: kgl1mq-0 eFXRHn sc-ifAKCX ghBVzA   
+                            # São classes diferentes, preciso achar algo incomum
+                            # Achei esta: //div[@class='sc-12rk7z2-7 kDVQFY'] 
+                            # Como queremos os titulos pra jogar na tabela, é só ir na tag mãe h2 desta forma; //div[@class='sc-12rk7z2-7 kDVQFY']//h2
 
-        input('')
-        driver.close()    
-            
+            titulos = driver.find_elements(By.XPATH,"//div[@class='sc-12rk7z2-7 kDVQFY']//h2")
+
+                            # Agora devemos pesquisar os preços:
+
+            precos = driver.find_elements(By.XPATH, "//div[@class='sc-1kn4z61-1 dGMPPn']")
+            links = driver.find_elements(By.XPATH, "//a[@data-lurker-detail='list_id']")
+
+                            # estados_todos = driver.find_elements(By.XPATH, '//a[@class="sc-1l6qrj6-0 hSmLZl sc-gzVnrw kGFTcZ"]') 
+
+
+            # Guardar esses dados em arquivos CSV
+            for titulo, preco, link in zip(titulos, precos, links):
+                with open('precos.csv', 'a', encoding='utf-8', newline='') as arquivo:
+                        link_processado = link.get_attribute('href')   # href é o atributo onde se encontra de fato o link
+                        arquivo.write(f'{titulo.text};{preco.text};{link_processado}{os.linesep}')  #os.linesep é uma quebra de linha para organizar as linhas
+            try:               
+                proxima_pagina = driver.find_element(By.XPATH, "//span[text()='Próxima pagina']")     
+                proxima_pagina.click()
+            except:
+                print('Fim da extração')
+                break      
+
+    input('')
+    driver.close()    
+                
