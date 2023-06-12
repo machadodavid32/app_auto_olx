@@ -1,3 +1,0 @@
-O executável, tal como o arquivo csv gerado, encontra-se em:
-
-build\exe.win-amd64-3.10
