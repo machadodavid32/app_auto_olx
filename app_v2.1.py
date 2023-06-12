@@ -13,6 +13,8 @@ from selenium.webdriver.chrome.service import Service as ChromeService
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.common.exceptions import *
 from time import sleep
 import os
 import PySimpleGUI as sg
@@ -68,175 +70,172 @@ while True:
             })
             driver = webdriver.Chrome(service=ChromeService(
                 ChromeDriverManager().install()), options=chrome_options)
+            
+
 
             return driver
 
 
         driver = iniciar_driver()
+        driver.implicitly_wait(10)
+        
         # Entrar na página
         driver.get('https://www.olx.com.br/')
-        sleep(5)
         
-        
-        #driver.execute_script("window.scrollTo(0, 900);")
-        #sleep(5)
         
         busca = driver.find_element(By.XPATH,"//input[@id='searchtext-input']") 
-        sleep(5)
         busca.click()
-        sleep(2)
         busca.send_keys(pesquisa)
         
         # Achar campo busca em buscar
         botao_busca = driver.find_element(By.CLASS_NAME, 'search-button-submit')
-        sleep(1)
         botao_busca.click()
         
         br = driver.find_element(By.XPATH,"//li[@class='wodqy3-0 htIWfJ']")
         br.click()
-        sleep(5)
+        
         
         if query == 'Acre':
             ac = driver.find_element(By.LINK_TEXT,'Acre')
             ac.click()
-            sleep(5)
+            
             
         if query == 'Alagoas':
             al = driver.find_element(By.LINK_TEXT,'Alagoas')
             al.click()
-            sleep(5)    
+                
         
         if query == 'Amapá':
             ap = driver.find_element(By.LINK_TEXT, 'Amapá')
             ap.click()
-            sleep(5)
+            
                     
         if query == 'Amazonas':
             am = driver.find_element(By.LINK_TEXT, 'Amazonas')
             am.click()
-            sleep(5)
+            
                 
         if query == 'Bahia':
             ba = driver.find_element(By.LINK_TEXT, 'Bahia')
             ba.click()
-            sleep(5)
+            
             
         if query == 'Ceará':
             ce = driver.find_element(By.LINK_TEXT, 'Ceará')
             ce.click()
-            sleep(5)
+            
             
         if query == 'Distrito Federal':
             df = driver.find_element(By.LINK_TEXT, 'Distrito Federal')
             df.click()
-            sleep(5)
+            
             
         if query == 'Espírito Santo':
             es = driver.find_element(By.LINK_TEXT, 'Espírito Santo')
             es.click()
-            sleep(5)
+            
             
         if query == 'Goiás':
             go = driver.find_element(By.LINK_TEXT, 'Goiás')
             go.click()
-            sleep(5)       
+                  
             
         if query == 'Maranhão':
             ma = driver.find_element(By.LINK_TEXT, 'Maranhão')
             ma.click()
-            sleep(5)        
+                    
             
         if query == 'Mato Grosso':
             mt = driver.find_element(By.LINK_TEXT, 'Mato Grosso')
             mt.click()
-            sleep(5)    
+              
             
         if query == 'Mato Grosso do Sul':
             ms = driver.find_element(By.LINK_TEXT, 'Mato Grosso do Sul')
             ms.click()
-            sleep(5)            
+                     
             
         if query == 'Minas Gerais':
             mg = driver.find_element(By.LINK_TEXT, 'Minas Gerais')
             mg.click()
-            sleep(5)
+            
             
         if query == 'Pará':
             pa = driver.find_element(By.LINK_TEXT, 'Pará')
             pa.click()
-            sleep(5)
+            
             
         if query == 'Paraíba':
             pb = driver.find_element(By.LINK_TEXT, 'Paraíba')
             pb.click()
-            sleep(5)
+            
             
         if query == 'Paraná':
             pr = driver.find_element(By.LINK_TEXT, 'Paraná')
             pr.click()
-            sleep(5)
+            
             
         if query == 'Pernanbuco':
             pe = driver.find_element(By.LINK_TEXT, 'Pernanbuco')
             pe.click()
-            sleep(5)
+            
             
         if query == 'Piauí':
             pi = driver.find_element(By.LINK_TEXT, 'Piauí')
             pi.click()
-            sleep(5)
+            
             
         if query == 'Rio de Janeiro':
             rj = driver.find_element(By.LINK_TEXT, 'Rio de Janeiro')
             rj.click()
-            sleep(5)
+            
             
         if query == 'Rio Grande do Norte':
             rn = driver.find_element(By.LINK_TEXT, 'Rio Grande do Norte')
             rn.click()
-            sleep(5)
+            
             
         if query == 'Rio Grande do Sul':
             rs = driver.find_element(By.LINK_TEXT, 'Rio Grande do Sul')
             rs.click()
-            sleep(5)
+            
             
         if query == 'Rondônia':
             ro = driver.find_element(By.LINK_TEXT, 'Rondônia')
             ro.click()
-            sleep(5)
+            
             
         if query == 'Roraima':
             rr = driver.find_element(By.LINK_TEXT, 'Roraima')
             rr.click()
-            sleep(5)
+            
             
         if query == 'Santa Catarina':
             sc = driver.find_element(By.LINK_TEXT, 'Santa Catarina')
             sc.click()
-            sleep(5)
+            
             
         if query == 'São Paulo':
             sp = driver.find_element(By.LINK_TEXT, 'São Paulo')
             sp.click()
-            sleep(5)
+            
             
         if query == 'Sergipe':
             se = driver.find_element(By.LINK_TEXT, 'Sergipe')
             se.click()
-            sleep(5)
+            
             
         if query == 'Tocantins':
             to = driver.find_element(By.LINK_TEXT, 'Tocantins')
             to.click()
-            sleep(5)          
+                     
         
     except:
         print("Problemas de conexão. Está conectado á internet?")
     
     while True:
         driver.execute_script('window.scrollTo(0,document.body.scrollHeight);')
-        sleep(3)
+        
 
 
                         # Class anuncio normal: kgl1mq-0 eFXRHn sc-ifAKCX iUMNkO
@@ -247,13 +246,9 @@ while True:
 
         titulos = driver.find_elements(By.XPATH,"//div[@class='sc-12rk7z2-7 kDVQFY']//h2")
 
-                        # Agora devemos pesquisar os preços:
-
+        # Agora devemos pesquisar os preços:
         precos = driver.find_elements(By.XPATH, "//div[@class='sc-1kn4z61-1 dGMPPn']")
         links = driver.find_elements(By.XPATH, "//a[@data-lurker-detail='list_id']")
-
-                        # estados_todos = driver.find_elements(By.XPATH, '//a[@class="sc-1l6qrj6-0 hSmLZl sc-gzVnrw kGFTcZ"]') 
-
 
         # Guardar esses dados em arquivos CSV
         for titulo, preco, link in zip(titulos, precos, links):
@@ -262,9 +257,9 @@ while True:
                     arquivo.write(f'{titulo.text};{preco.text};{link_processado}{os.linesep}')  #os.linesep é uma quebra de linha para organizar as linhas
         try:               
             proxima_pagina = driver.find_element(By.XPATH, "//span[text()='Próxima página']")    
-            sleep(2) 
+            
             proxima_pagina.click()
-            sleep(3)
+            
         except:
             print('Fim da extração')
             break      
