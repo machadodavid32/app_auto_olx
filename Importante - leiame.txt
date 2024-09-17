@@ -1,0 +1,12 @@
+O executável, tal como o arquivo csv gerado, encontra-se em:
+
+build\exe.win-amd64-3.10
+
+
+- Este programa busca e apresenta um arquivo para ser aberto no Excel(.csv).
+
+- O aplicativo abre o site da Olx(olx.com.br) e começa a "varredura de dados" após a escolha do estado.
+
+- Quanto maior é o numero de produtos, maior é o tempo para execução da varredura (dependendo, pode levar horas).
+
+- Ainda não implementei no aplicativo o controle de memoria, portanto, nesta versão, o aviso de "programa não respondendo" deve aparecer, mas é só aguardar a finalização do processo. 

@@ -81,8 +81,9 @@ while True:
     sleep(5)
         
     if query == 'Brasil':
-        br = driver.find_element(By.LINK_TEXT,'BRASIL')
-        br.click()
+        driver.get('https://www.olx.com.br/autos-e-pecas/motos?q=mt%2007')
+        #br = driver.find_element(By.LINK_TEXT,'BRASIL')
+        #br.click()
         sleep(5)
     
     if query == 'Acre':
