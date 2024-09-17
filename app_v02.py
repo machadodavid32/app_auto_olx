@@ -17,7 +17,7 @@ from time import sleep
 import os
 import PySimpleGUI as sg
 from threading import Thread
-import random
+
 
 
 layout = [
@@ -44,12 +44,12 @@ while True:
     event, values = window.read()
     if event == sg.WIN_CLOSED:
         break
-    elif event == 'Start':
-        thread_inicio = Thread(target='Start', daemon=True)
+    elif event == 'Start':   
+        thread_inicio = Thread(target='Start', args=(window,values, 'Start'), daemon=True)
         thread_inicio.start()
         pesquisa = values['pesquisa']
         query = values[0]
-    
+        
     sleep(3)
 
 
