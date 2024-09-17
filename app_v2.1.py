@@ -79,24 +79,26 @@ while True:
         driver = iniciar_driver()
         driver.implicitly_wait(10)
         
-        # Entrar na página
-        driver.get('https://www.olx.com.br/')
+        # Entrar na página - ok 17/09/2024
+        driver.get('https://www.olx.com.br/brasil')
         
-        
-        busca = driver.find_element(By.XPATH,"//input[@id='searchtext-input']") 
+        # Botão busca - ok 17/09/2024
+        busca = driver.find_element(By.XPATH,"//input[contains(@class, 'olx-text-input__input-field') and contains(@class, 'olx-text-input__input-field--medium')]") 
         busca.click()
-        busca.send_keys(pesquisa)
+        busca.send_keys(pesquisa) # enviando
         
-        # Achar campo busca em buscar
-        botao_busca = driver.find_element(By.CLASS_NAME, 'search-button-submit')
+        # Escolher estado
+        # Caso escolha um estado, precisa clicar no estado primeiro - fazer isso 17/09/2024
+        # Clicando em buscar 17/09/2024
+        botao_busca = driver.find_element(By.CLASS_NAME, '_2dsuYh')
         botao_busca.click()
         
-        br = driver.find_element(By.XPATH,"//li[@class='wodqy3-0 htIWfJ']")
+        br = driver.find_element(By.XPATH,"//li[@class='olx-dropdown__native olx-dropdown__native--medium olx-dropdown__native--icon-left olx-dropdown__native--icon-left--medium']")
         br.click()
         
         
         if query == 'Acre':
-            ac = driver.find_element(By.LINK_TEXT,'Acre')
+            ac = driver.get(By.LINK_TEXT,'Acre')
             ac.click()
             
             
