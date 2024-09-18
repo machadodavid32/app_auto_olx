@@ -86,19 +86,19 @@ while True:
         busca = driver.find_element(By.XPATH,"//input[contains(@class, 'olx-text-input__input-field') and contains(@class, 'olx-text-input__input-field--medium')]") 
         busca.click()
         busca.send_keys(pesquisa) # enviando
+             
         
-        # Escolher estado
-        # Caso escolha um estado, precisa clicar no estado primeiro - fazer isso 17/09/2024
         # Clicando em buscar 17/09/2024
         botao_busca = driver.find_element(By.CLASS_NAME, '_2dsuYh')
         botao_busca.click()
         
-        br = driver.find_element(By.XPATH,"//li[@class='olx-dropdown__native olx-dropdown__native--medium olx-dropdown__native--icon-left olx-dropdown__native--icon-left--medium']")
-        br.click()
+        # Escolhendo o estado
+        #br = driver.find_element(By.XPATH,"//li[@class='olx-dropdown__native olx-dropdown__native--medium olx-dropdown__native--icon-left olx-dropdown__native--icon-left--medium']")
+        #br.click()
         
         
         if query == 'Acre':
-            ac = driver.get(By.LINK_TEXT,'Acre')
+            ac = driver.find_element(By.LINK_TEXT,'Acre')
             ac.click()
             
             
@@ -235,8 +235,10 @@ while True:
     except:
         print("Problemas de conexão. Está conectado á internet?")
     
+    #while True:
+     #   driver.execute_script('window.scrollTo(0,document.body.scrollHeight);')
     while True:
-        driver.execute_script('window.scrollTo(0,document.body.scrollHeight);')
+        driver.execute_script('window.scrollTo(0, document.body.scrollHeight / 2);')
         
 
 
