@@ -235,13 +235,13 @@ while True:
     except:
         print("Problemas de conexão. Está conectado á internet?")
     
-    #while True:
-     #   driver.execute_script('window.scrollTo(0,document.body.scrollHeight);')
     while True:
-        driver.execute_script('window.scrollTo(0, document.body.scrollHeight / 2);')
-        
-
-
+        next_page = driver.find_element(By.XPATH, "//span[text()='Próxima página']")
+        #driver.execute_script('window.scrollTo(0,document.body.scrollHeight);')
+        #driver.execute_script('window.scrollTo(0,document.body.scrollHeight);')
+        driver.execute_script("arguments[0].scrollIntoView();", next_page)
+        next_page.click()
+    
                         # Class anuncio normal: kgl1mq-0 eFXRHn sc-ifAKCX iUMNkO
                         # Class anuncio destaque: kgl1mq-0 eFXRHn sc-ifAKCX ghBVzA   
                         # São classes diferentes, preciso achar algo incomum
@@ -260,7 +260,8 @@ while True:
                     link_processado = link.get_attribute('href')   # href é o atributo onde se encontra de fato o link
                     arquivo.write(f'{titulo.text};{preco.text};{link_processado}{os.linesep}')  #os.linesep é uma quebra de linha para organizar as linhas
         try:               
-            proxima_pagina = driver.find_element(By.XPATH, "//span[text()='Próxima página']")    
+            proxima_pagina = driver.find_element(By.XPATH, "//span[text()='Próxima página']")  
+             
             
             proxima_pagina.click()
             
