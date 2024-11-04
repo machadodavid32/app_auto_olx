@@ -99,7 +99,8 @@ while True:
         
         
         if query == 'Acre':
-            ac = driver.find_element(By.LINK_TEXT,'Acre')
+            #ac = driver.find_element(By.LINK_TEXT,'Acre')
+            ac = driver.get('https://www.olx.com.br/estado-ac')
             ac.click()
             
             
